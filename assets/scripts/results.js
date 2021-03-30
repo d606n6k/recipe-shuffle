@@ -1,5 +1,5 @@
 // Variables
-var query = "steak";
+var query = "salmon";
 var cuisine = "";
 var diet ;
 var ingString = "1 1/2 pound skirt steak, cut into 4 pieces"
@@ -29,7 +29,7 @@ function parseAPI() {
 }
 
 function searchApi(query, cuisine, diet) {
-    var locQueryUrl = "https://api.edamam.com/search?app_id=89a077a3&app_key=71f15e83ac336ca5a82773d77c533a21&q=" + query;
+    var locQueryUrl = "https://api.edamam.com/search?app_id=89a077a3&app_key=71f15e83ac336ca5a82773d77c533a21&imageSize=LARGE&ingr=5&q=" + query;
     
   
     if (!query) {
@@ -56,7 +56,7 @@ function searchApi(query, cuisine, diet) {
       .then(function (locRes) {
         
         console.log(locRes)
-        ingString = locRes.hits[0].recipe.ingredients[0].text
+        ingString = locRes.hits[0].recipe.ingredients[4].text
         for (i=0; i<2; i++){
             console.log(locRes.hits[i].recipe.label)
             console.log(locRes.hits[i].recipe.image)
