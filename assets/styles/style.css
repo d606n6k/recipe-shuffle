@@ -1,4 +1,11 @@
-/* these are 'test' classes for layout prototype, these class names need to be more semantic and changed to color pallete for MVP */
+body{
+    font-family: 'Fredoka One', cursive;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
 #main-nav {
     background-color: #e91e43;
 }
@@ -7,7 +14,6 @@
     background-color: #ff5f7c;
     height: 400px;
     background: linear-gradient( rgb(255 255 255 / 45%), rgb(118 118 118 / 45%) ), url(../images/hero.jpg);
-    /* background-image: url(../images/hero.jpg); */
     max-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -15,30 +21,43 @@
 .navbar-item {
     color: white;
 }
+
+.navbar-start a {
+    transition: color ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.navbar-start a:hover {
+    color: #ffd2da;
+    background-color: #e91e43;
+    transition: color ease-in-out;
+    transition-duration: 0.5s;
+}
+
 .navbar-burger{
     background-color: #e93a5a;
 }
 .navbar-burger span {
     color: white;
 }
-.recipe-test1 {
+.homepage-main {
     background: rgb(255,95,124);
-    background: linear-gradient(180deg, rgba(255,95,124,1) 0%, rgba(255,95,124,1) 35%, rgba(255,0,0,1) 100%);
+    background: linear-gradient(162deg, rgba(255,95,124,1) 0%, rgba(255,95,124,1) 35%, rgba(255,0,0,1) 100%);
 }
 
-.recipe-test2 {
+.homepage-recipe {
     /* background-color: orange; */
 }
 
-.recipe-test2 h2 {
+.homepage-recipe h2 {
     text-align: center;
 }
 
-.recipe-test3 {
+.homepage-find-recipe {
     background-color: rgb(177 25 53 / 0%);
 }
 
-.recipe-test3 h2 {
+.homepage-find-recipe h2 {
     text-align: center;
 }
 
@@ -82,4 +101,8 @@
     background-color: #e91e43;
     color: white;
     padding: 2rem 1.5rem 2rem;
+}
+
+.footer a {
+    color: white;
 }
