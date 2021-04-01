@@ -1,7 +1,16 @@
+/* these are 'test' classes for layout prototype, these class names need to be more semantic and changed to color pallete for MVP */
 #main-nav {
-    background-color: blue;
+    background-color: background-color: rgb(238 238 238);
 }
 
-#section-body {
+#hero-body {
     background-color: red;
+}
+
+.recipe-test1 {
+    background-color: rgb(255, 0, 149);
+}
+
+.recipe-test2 {
+    background-color: orange;
 }
