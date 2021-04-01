@@ -1,0 +1,44 @@
+.navText {
+    border: 1px solid black;
+    margin: auto; 
+} 
+
+.mainPic {
+    max-height: 500px;
+}
+
+.mainCard {
+    margin: auto;
+    border: 1px solid black;
+}
+
+.searchBox {
+    margin: auto;
+    border: 1px solid black;
+}
+
+
+.mainColumn {
+    margin:auto
+}
+
+.sliderBox {
+    height: 450px;
+}
+
+.middleContainerResults {
+    background-color: gray;
+    height: 500px;   
+}
+
+.recipeName {
+    background-color: gray; 
+}
+
+.recipeNameText {
+    color: black;  
+}
+
+.splide__list {
+    height: 400px;
+}
