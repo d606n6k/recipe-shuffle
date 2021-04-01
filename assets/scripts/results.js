@@ -1,8 +1,9 @@
+new Splide( '.splide' ).mount();
 // Variables
 var query = "salmon";
-var cuisine = "";
+var cuisine = "japanese";
 var diet ;
-var ingString = "1 1/2 pound skirt steak, cut into 4 pieces"
+var ingString;
 
 // label, image, ingredients [], dietLabels, healthLabels
 
@@ -28,7 +29,7 @@ function parseAPI() {
     })
 }
 
-function searchApi(query, cuisine, diet) {
+function searchApi() {
     var locQueryUrl = "https://api.edamam.com/search?app_id=89a077a3&app_key=71f15e83ac336ca5a82773d77c533a21&imageSize=LARGE&ingr=5&q=" + query;
     
   
@@ -37,13 +38,13 @@ function searchApi(query, cuisine, diet) {
           } 
     
     if (cuisine) {
-    locQueryUrl += "&cuisineType=" + cuisineType;
+    locQueryUrl = locQueryUrl + "&cuisineType=" + cuisine;
     }
 
     if (diet) {
         locQueryUrl += "&dietLabels=" + diet;
       }
-  
+      console.log(locQueryUrl);
   
     fetch(locQueryUrl)
       .then(function (response) {
@@ -70,4 +71,4 @@ function searchApi(query, cuisine, diet) {
         console.error(error);
       });
   }
-searchApi(query);
+searchApi();
