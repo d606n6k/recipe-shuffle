@@ -27,6 +27,9 @@
 
     <!-- ###################################### Splide ######################################## -->
 
+
+    <!-- ########### picName -->
+
     <div class="container has-text-centered is-two-fifths resultsImageContainer">
 
         <div class="container is-centered is-10">
@@ -37,7 +40,10 @@
                     <div class="splide">
                         <div class="splide__track">
                             <ul class="splide__list">
-                                <li class="splide__slide">Slide 01</li>
+                                <li class="splide__slide">Slide 01
+                                    <h3>Hello</h3>
+                                </li>
+
                                 <li class="splide__slide">Slide 02</li>
                                 <li class="splide__slide">Slide 03</li>
                                 <li class="splide__slide">Slide 04</li>
@@ -52,29 +58,30 @@
 
         <!-- ############################## Ingredients List ###################################### -->
 
-            <div class="container is-centered">
+            <div class="container is-centered ingredientsListContainer">
                 <br>
-                <ul class="ingredientsList is-centered">Ingredients (Check Box if You Have Ingredient)</ul>
+                <ul class="container ingredientsList is-centered listUL">Ingredients (Check Box if You Have Ingredient)
                 <br>
-                <label class="checkbox">
+                <label class="checkbox ingredient">
                     <input type="checkbox">
-                    ingredient1
+                    ingredient 1
                   </label>
                   <br>
-                  <label class="checkbox">
+                  <label class="checkbox ingredient">
                     <input type="checkbox">
-                    ingredient2
+                    ingredient 2
                   </label>
                   <br>
-                  <label class="checkbox">
+                  <label class="checkbox ingredient">
                     <input type="checkbox">
-                    ingredient3
+                    ingredient 3
                   </label>
                   <br>
-                  <label class="checkbox">
+                  <label class="checkbox ingredients">
                     <input type="checkbox">
-                    ingredient4
+                    ingredient 4
                   </label>
+                </ul>
                 
             </div>
 
@@ -105,7 +112,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./assets/scripts/script.js"></script>
+    <script src="./assets/scripts/results.js"></script>
 </body>
 
 

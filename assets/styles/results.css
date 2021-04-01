@@ -41,3 +41,16 @@
 .splide__list {
     height: 400px;
 }
+
+.ingredientsListContainer {
+    border: 1px solid black;
+    padding-bottom: 10px;
+}
+
+.listUL {
+    border: 1px solid black;
+}
+
+.ingredient {
+    padding-bottom: 10px;
+}
