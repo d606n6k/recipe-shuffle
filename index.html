@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>RecipeShuffle.io</title>
 </head>
 <body>
@@ -15,16 +20,16 @@
         <div class="container">
             <div class="navbar-brand">
             <a class="navbar-item is-dark" href="./index.html"></a>
-            <a role="button" class="navbar-burger is-" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <!-- <a role="button" class="navbar-burger is-" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
-            </a>
+            </a> -->
             </div>
             <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item" href="./index.html">recipeShuffle.io</a>
-            </div>     
+              <div class="navbar-start">
+                  <a class="navbar-item" href="./index.html">recipeShuffle.io</a>
+              </div>     
             </div>
         </div>        
     </nav>
@@ -39,57 +44,65 @@
           </p>
         </div>
     </section>
-    <section class="section recipe-test1">
+    <section class="section homepage-main">
         <div class="columns is-centered">
           <div class="column is-four-fifths">
-            <h1 class="title">Section</h1>
+            <h1 class="title">Welcome to RecipeShuffle.io!</h1>
             <h2 class="subtitle">
-              A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading.
+              A simple website built to help you find <strong>recipes</strong> based <br>on what <strong>ingredients</strong> you have in your <strong>pantry!</strong>
             </h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam distinctio natus deleniti labore. Expedita dolorum maxime beatae aliquam, atque reprehenderit eaque temporibus explicabo ab vel labore, officia, soluta dolor! Magnam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum modi corporis harum aut, possimus vitae quis laboriosam accusantium excepturi ducimus saepe autem corrupti molestias, tempora eaque quaerat quisquam vel sed.</p>
           </div>  
         </div>  
         <!-- card for example recipe -->
-        <div class="columns recipe-test2">  
+        <div class="columns homepage-recipe">  
           <div class="column is-three-fifths card recipe-main-background is-offset-one-fifth">
             <div class="columns is-centered">  
-              <div class="card-image column is-6">
+              <div id="recipe-name-homepage" class="card-image column is-6">
                   <h2 class="title is-4">Recipe Name</h2>
-                <figure class="image">
-                  <img src="https://via.placeholder.com/900x560" alt="Placeholder image">
-                </figure>
+                  <figure class="image">
+                    <a href="#"><img src="https://via.placeholder.com/900x560" alt="Placeholder image"></a>
+                  </figure>
+                <!-- need empty <i> tags for js -->
               </div>
             </div>  
           </div>
         </div>
         <!-- search box inputs -->
-        <div class="columns recipe-test3 recipe-search">  
+        <div class="columns homepage-find-recipe recipe-search">  
           <div class="column is-three-fifths card recipe-search-background is-offset-one-fifth">
             <div class="columns is-centered">  
               <div class="column is-10">
                   <h2 class="title is-4">Find a Recipe</h2>
-                  <input class="input is-primary is-medium" type="text" placeholder="Search for a recipe!">
+                  <input id="recipe-input" class="input is-primary is-medium" type="text" placeholder="Search for a recipe!">
               </div>
             </div>  
             <div class="columns is-centered">
-              <div class="column is-4">
-                <div class="select is-primary">
-                  <select>
-                    <option>Choose a Protein</option>
-                    <option>With options</option>
+              <div id="cuisine-control" class="column is-4">
+                <p>Choose a cuisine:</p>
+                <div class="select select-control is-primary">
+                  <select id="cuisine">
+                    <option>Cuisine</option>
+                    <option>Japanese</option>
+                    <option>American</option>
+                    <option>Italian</option>
+                    <option>Chinese</option>
+                    <option>Indian</option>
                   </select>
                 </div>
               </div>
-              <div class="column is-4">
-                <div class="select is-primary">
-                  <select>
-                    <option>Choose a Veggie</option>
-                    <option>With options</option>
+              <div id="diet-control" class="column is-4">
+                <p>Choose a diet:</p>
+                <div class="select select-control is-primary">
+                  <select id="diet">
+                    <option>Diet</option>
+                    <option>Paleo</option>
+                    <option>Keto</option>
                   </select>
                 </div>
               </div>
             </div>
-            <div class="columns is-centered">
+            <div class="column is-centered">
               <button class="button is-primary is-medium is-fullwidth">Search Recipe</button>
             </div>
           </div>
@@ -99,7 +112,7 @@
     <footer class="footer">
       <div class="content has-text-centered">
         <p>
-          <strong>recipeShuffle.io</strong> 
+          <strong><a href="./index.html">recipeShuffle.io</a></strong> 
         </p>
       </div>
     </footer>
