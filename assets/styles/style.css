@@ -1,1 +1,39 @@
+/* these are 'test' classes for layout prototype, these class names need to be more semantic and changed to color pallete for MVP */
+#main-nav {
+    background-color: rgb(238 238 238);
+}
 
+#hero-body {
+    background-color: red;
+}
+
+.recipe-test1 {
+    background-color: rgb(227, 230, 51);
+}
+
+.recipe-test2 {
+    background-color: orange;
+}
+
+.recipe-test3 {
+    background-color: rgb(123, 255, 0);
+}
+
+.recipe-search {
+
+}
+
+.recipe-main-background {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.recipe-search-background {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.footer {
+    background-color: #fafafa;
+    padding: 2rem 1.5rem 2rem;
+}
