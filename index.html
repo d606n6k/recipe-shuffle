@@ -53,11 +53,12 @@
         <div class="columns recipe-test2">  
           <div class="column is-three-fifths card recipe-main-background is-offset-one-fifth">
             <div class="columns is-centered">  
-              <div class="card-image column is-6">
+              <div id="recipe-name-homepage" class="card-image column is-6">
                   <h2 class="title is-4">Recipe Name</h2>
-                <figure class="image">
-                  <img src="https://via.placeholder.com/900x560" alt="Placeholder image">
-                </figure>
+                  <figure class="image">
+                    <a href="#"><img src="https://via.placeholder.com/900x560" alt="Placeholder image"></a>
+                  </figure>
+                <!-- need empty <i> tags for js -->
               </div>
             </div>  
           </div>
@@ -68,28 +69,35 @@
             <div class="columns is-centered">  
               <div class="column is-10">
                   <h2 class="title is-4">Find a Recipe</h2>
-                  <input class="input is-primary is-medium" type="text" placeholder="Search for a recipe!">
+                  <input id="recipe-input" class="input is-primary is-medium" type="text" placeholder="Search for a recipe!">
               </div>
             </div>  
             <div class="columns is-centered">
-              <div class="column is-4">
-                <div class="select is-primary">
-                  <select>
-                    <option>Choose a Protein</option>
-                    <option>With options</option>
+              <div id="cuisine-control" class="column is-4">
+                <p>Choose a cuisine:</p>
+                <div class="select select-control is-primary">
+                  <select id="cuisine">
+                    <option>Cuisine</option>
+                    <option>Japanese</option>
+                    <option>American</option>
+                    <option>Italian</option>
+                    <option>Chinese</option>
+                    <option>Indian</option>
                   </select>
                 </div>
               </div>
-              <div class="column is-4">
-                <div class="select is-primary">
-                  <select>
-                    <option>Choose a Veggie</option>
-                    <option>With options</option>
+              <div id="diet-control" class="column is-4">
+                <p>Choose a diet:</p>
+                <div class="select select-control is-primary">
+                  <select id="diet">
+                    <option>Diet</option>
+                    <option>Paleo</option>
+                    <option>Keto</option>
                   </select>
                 </div>
               </div>
             </div>
-            <div class="columns is-centered">
+            <div class="column is-centered">
               <button class="button is-primary is-medium is-fullwidth">Search Recipe</button>
             </div>
           </div>
