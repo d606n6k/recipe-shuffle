@@ -4,12 +4,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/styles/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
     <title>RecipeShuffle.io - Recipes</title>
 </head>
+
+
+
 <body>
+
+    
+    <!-- ######################### Banner ########################### -->
+
+    <div class="box has-text-centered">
+        <h1 class="title is-centered">See your Recipes Below</h1>
+        <p>Bon Appétit!</p>
+    </div>
+
+
+    <!-- ###################################### Splide ######################################## -->
+
+    <div class="container has-text-centered is-two-fifths resultsImageContainer">
+
+        <div class="container is-centered is-10">
+
+            <div class="container is-three-fifths column middleContainerResults" rows="20">
+                
+                <div class="box sliderBox">
+                    <div class="splide">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">Slide 01</li>
+                                <li class="splide__slide">Slide 02</li>
+                                <li class="splide__slide">Slide 03</li>
+                                <li class="splide__slide">Slide 04</li>
+                                <li class="splide__slide">Slide 05</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        <!-- ############################## Ingredients List ###################################### -->
+
+            <div class="container is-centered">
+                <br>
+                <ul class="ingredientsList is-centered">Ingredients (Check Box if You Have Ingredient)</ul>
+                <br>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    ingredient1
+                  </label>
+                  <br>
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    ingredient2
+                  </label>
+                  <br>
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    ingredient3
+                  </label>
+                  <br>
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    ingredient4
+                  </label>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ################################### Footer ####################################### -->
+
+    <footer class="footer">
+        <div class="content has-text-centered footerBox">
+            <p>
+                Footer Stuff
+            </p>
+        </div>
+    </footer>
+
+
+
+
+   
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./assets/scripts/script.js"></script>
 </body>
+
+
 </html>
