@@ -1,56 +1,52 @@
-.navText {
-    border: 1px solid black;
-    margin: auto; 
-} 
 
-.mainPic {
-    max-height: 500px;
+body {
+    background-color: gray;
+    font-family: 'Fredoka One', cursive;
 }
 
-.mainCard {
-    margin: auto;
-    border: 1px solid black;
-}
-
-.searchBox {
-    margin: auto;
-    border: 1px solid black;
-}
-
-.mainColumn {
-    margin:auto
-}
-
-.sliderBox {
-    height: 450px;
+.pageHeader {
+    background: rgb(129,103,0);
+    background: linear-gradient(17deg, rgba(129,103,0,1) 0%, rgba(255,157,0,1) 100%);
+    font-family: Roboto;
 }
 
 .middleContainerResults {
-    background-color: gray;
     height: 500px;   
 }
 
 .recipeName {
-    background-color: gray; 
+    background-color: white;
+    color: black;
+    padding: 10px;
+    opacity: 0.7;
+    max-width: 20%;
+    border-radius: 5px;
 }
 
-.recipeNameText {
-    color: black;  
+.sliderBox {
+    background-color: lightgray;
+    border-radius: 10px;
 }
 
 .splide__list {
     height: 400px;
 }
 
-.ingredientsListContainer {
-    border: 1px solid black;
-    padding-bottom: 10px;
+.splideBox {
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
 }
 
-.listUL {
-    border: 1px solid black;
+.listSlide {
+    justify-content: flex-start;
+    background-color: white;
+    mix-blend-mode: ;
+    width: auto;
+    padding: 10px;
+    opacity: 0.9;
+    border-radius: 2px;
+    margin-top: 200px;
+    
 }
 
-.ingredient {
-    padding-bottom: 10px;
-}
+

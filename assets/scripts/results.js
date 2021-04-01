@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-        new Splide( '.splide' ).mount();
-=======
 new Splide( '.splide' ).mount();
 // Variables
 var query = "salmon";
@@ -76,4 +72,3 @@ function searchApi() {
       });
   }
 searchApi();
->>>>>>> 0738d6801b1ab14fb98948d07b44a4420f85ea37
