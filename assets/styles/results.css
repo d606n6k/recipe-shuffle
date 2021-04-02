@@ -45,8 +45,24 @@ body {
     padding: 10px;
     opacity: 0.9;
     border-radius: 2px;
-    margin-top: 200px;
-    
+    margin-top: 200px;    
 }
 
+.splide__slide {
+    width: fit-content;
+}
+
+.topDiv1, .topDiv2, .topDiv3, .topDiv4, .topDiv5 {
+    border: 1px solid black;
+    height: 100%;
+}
+
+.listUL1, .listUL2, .listUL3, .listUL4, .listUL5 {
+    border: 1px solid black;
+    height: fit-content;
+    max-width: 250px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
 
