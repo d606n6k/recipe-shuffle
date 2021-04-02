@@ -1,10 +1,87 @@
 
+/* body {
+    background-color: gray;
+    font-family: 'Fredoka One', cursive;
+} */
 
+/* .pageHeader {
+    background: rgb(129,103,0);
+    background: linear-gradient(17deg, rgba(129,103,0,1) 0%, rgba(255,157,0,1) 100%);
+    font-family: Roboto;
+} */
 
+/* .middleContainerResults {
+    height: 607px;   
+} */
 
+/* #recipe1Name, #recipe2Name, #recipe3Name, #recipe4Name, #recipe5Name {
+    background-color: white;
+    color: black;
+    margin-left: 5px;
+    padding-left: 10px;
+    font-size: 24px;
+    opacity: 0.9;
+    max-width: 250px;
+    border-radius: 5px;
+} */
 
+/* .sliderBox {
+    background-color: lightgray;
+    border-radius: 10px;
+} */
 
+/* .splide__list {
+    height: 600px;
+} */
 
+/* .splideBox {
+    background: rgb(0,0,0); 
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
+    height: 700px;
+} */
 
+/* .listSlide {
+    justify-content: flex-start;
+    background-color: white; 
+    width: auto;
+    opacity: 0.9;
+    border-radius: 2px;
+    margin-top: 200px;    
+} */
 
+/* .splide__slide {
+    width: fit-content;
+} */
+
+/* .topDiv1, .topDiv2, .topDiv3, .topDiv4, .topDiv5 {
+    border: 1px solid black;
+    height: 100%;
+}
+
+.slide1, .slide2, .slide3, .slide4, .slide5 {
+    justify-content: center;
+    align-items: center;
+}
+
+.listUL1, .listUL2, .listUL3, .listUL4, .listUL5 {
+    border: 1px solid black;
+    height: fit-content;
+    padding: 5px;
+    max-width: 250px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: left;
+} */
+
+/* .splide {
+    max-width: 607;
+} */
+
+/* .slideContainer1, .slideContainer2, .slideContainer3, .slideContainer4, .slideContainer5 {
+    background-image: url(/assets/images/hero.jpg);
+    background-repeat: no-repeat;
+    height: 600px;
+    padding: 50px;
+    width: 600px;
+} */
 

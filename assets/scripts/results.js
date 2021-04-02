@@ -1,4 +1,18 @@
-new Splide( '.splide' ).mount();
+// new Splide( '.splide' ).mount();
+
+new Splide( '.splide', {
+	type   : 'fade',
+	padding: {
+		right: '5rem',
+		left : '5rem',
+	},
+} ).mount();
+
+
+
+
+
+
 var listUL = $(".listUL")
 // temp vars for test driving
 var runBtn = document.querySelector("#run");
