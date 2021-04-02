@@ -9,10 +9,6 @@ new Splide( '.splide', {
 } ).mount();
 
 
-
-
-
-
 var listUL = $(".listUL")
 // temp vars for test driving
 var runBtn = document.querySelector("#run");
@@ -44,22 +40,25 @@ var recipe2 = {
   populatedIngredients: ["Teriyaki Sauce", "Scallion", "Kosher Salt", "Skinless Chicken Thigh"]
 }
 var recipes = [recipe0, recipe1, recipe2];
+var ingrUls = $(".listSlide")
+console.log(ingrUls)
 function renderRecipes() {
   for (var i=0; i < recipes.length; i++){
-    listUL.children().eq(i).children().first().text(recipes[i].label)
-    listUL.children().eq(i).children("ul").children().first().children().first().text(recipes[i].yield)
-    listUL.children().eq(i).attr("style", "width:100%; background: url('https://www.edamam.com/web-img/b2d/b2db47159040f3e9560ae4603e2edfaa-l.jpg') no-repeat; background-size: 100% 100%")
+    listUL.children().eq(i).children().children().first().text(recipes[i].label)
+    $(ingrUls[i]).children().first().children().first().text(recipes[i].yield)
+    $(ingrUls[i]).children().first().children().first().text(recipes[i].yield)
+    // listUL.children().eq(i).attr("style", "width:100%; background: url('https://www.edamam.com/web-img/b2d/b2db47159040f3e9560ae4603e2edfaa-l.jpg') no-repeat; background-size: 100% 100%")
     for (var j=0; j<recipes[i].populatedIngredients.length; j++){
       console.log(recipes[i].populatedIngredients.length)
       var ingrLi = document.createElement("li");
       var ingrChk = document.createElement("input");
       $(ingrLi).text(recipes[i].populatedIngredients[j]) 
       $(ingrChk).attr("type", "checkbox"); 
-      $(ingrChk).attr("class", "ingrCheckbox"); 
+      $(ingrChk).attr("style", "margin-right: .5rem;"); 
       $(ingrLi).prepend(ingrChk)
-      console.log(listUL.children().eq(i).children("ul").eq(0))
-      ingrUl = listUL.children().eq(i).children("ul")
-      ingrUl[0].appendChild(ingrLi)
+      // console.log(listUL.children().eq(i).children("ul").eq(0))
+      // ingrUl = listUL.children().eq(i).children("ul")
+      ingrUls[i].appendChild(ingrLi)
     } 
   }
 }
