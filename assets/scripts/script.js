@@ -1,2 +1,0 @@
-
-        new Splide( '.splide' ).mount();
