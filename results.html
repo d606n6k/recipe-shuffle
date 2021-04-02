@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" />
@@ -17,99 +16,95 @@
   <title>RecipeShuffle.io - Recipes</title>
 </head>
 
-<body>
-  <!-- ######################### Banner ########################### -->
 
-  <div class="box has-text-centered pageHeader">
-    <h1 class="title is-centered">See your Recipes Below</h1>
-    <p>Bon Appétit!</p>
-  </div>
 
-  <!-- ###################################### Splide ######################################## -->
+<div class="box has-text-centered pageHeader">
+  <h1 class="title is-centered">See your Recipes Below</h1>
+  <p>Bon Appétit!</p>
+  <button id="run">Run</button>
+  <button id="populate">Populate</button>
+</div>
+
+<div class="container has-text-centered resultsImageContainer">
 
   <div class="container has-text-centered resultsImageContainer">
-
     <div class="container is-centered is-100 splideBox">
       <div class="container is-four-fifths column middleContainerResults">
-
         <div class="box sliderBox">
           <div class="splide">
             <div class="splide__track">
               <ul class="splide__list column has-text-left listUL">
 
-                <li class="splide__slide" id="slide1">
-                  <div class="row topDiv1">
-                    <div class="recipeName">myBurrito</div>
-                    <ul class="row is-two-fifths mobile listUL1 listSlide">
-                      <li>Ingredients List</li>
-                      <li><input type="checkbox" /> Sriracha</li>
-                      <li><input type="checkbox" /> Franks</li>
-                      <li><input type="checkbox" /> Cholula</li>
-                      <li><input type="checkbox" /> Tobasco</li>
-                      <li><input type="checkbox" /> Tapatio</li>
-                      <li><input type="checkbox" /> Franks</li>
-                      <li><input type="checkbox" /> Cholula</li>
-                      <li><input type="checkbox" /> Tobasco</li>
-                      <li><input type="checkbox" /> Tapatio</li>
-                    </ul>
-                  </div>
+
+
+
+                <li class="splide__slide slide1" id="slide1">
+                      <div class="container is-centered slideContainer1">
+                        <h3 id="recipe1Name">myBurrito</h3>
+                      <ul class="container is-two-fifths is-pulled-left listUL1 listSlide">
+                        <li>Ingredients List</li>
+                        <li><input type="checkbox" /> Sriracha</li>
+                        <li><input type="checkbox" /> Franks</li>
+                        <li><input type="checkbox" /> Cholula</li>
+                        <li><input type="checkbox" /> Tobasco</li>
+                        <li><input type="checkbox" /> Tapatio</li> 
+                      </ul>
+                      </div>
+                </li>
+                <li class="splide__slide slide2" id="slide2">
+                      <div class="container  is-centered slideContainer2">
+                        <h3 id="recipe2Name">Taco</h3> 
+                      <ul class="container is-two-fifths is-pulled-left listUL2 listSlide">
+                        <li>Ingredients List</li>
+                        <li><input type="checkbox" /> Sriracha</li>
+                        <li><input type="checkbox" /> Franks</li>
+                        <li><input type="checkbox" /> Cholula</li>
+                        <li><input type="checkbox" /> Tobasco</li>
+                        <li><input type="checkbox" /> Tapatio</li> 
+                      </ul>
+                      </div>
                 </li>
 
-
-                <li class="splide__slide" id="slide2">
-                  <div class="row topDiv2">
-                    <div class="recipeName">myTaco</div>
-                    <ul class="row is-two-fifths listUL2 listSlide">
-                      <li>Ingredients List</li>
-                      <li><input type="checkbox" /> Sriracha</li>
-                      <li><input type="checkbox" /> Franks</li>
-                      <li><input type="checkbox" /> Cholula</li>
-                      <li><input type="checkbox" /> Tobasco</li>
-                      <li><input type="checkbox" /> Tapatio</li>
-                    </ul>
-                  </div>
+                <li class="splide__slide slide3" id="slide3">
+                      <div class="container  is-centered slideContainer3">
+                        <h3 id="recipe3Name">Quesadilla</h3>
+                      <ul class="container is-two-fifths is-pulled-left listUL3 listSlide">
+                        <li>Ingredients List</li>
+                        <li><input type="checkbox" /> Sriracha</li>
+                        <li><input type="checkbox" /> Franks</li>
+                        <li><input type="checkbox" /> Cholula</li>
+                        <li><input type="checkbox" /> Tobasco</li>
+                        <li><input type="checkbox" /> Tapatio</li> 
+                      </ul>
+                      </div>
                 </li>
 
-                <li class="splide__slide" id="slide3">
-                  <div class="row topDiv3">
-                    <div class="recipeName">myQuesadilla</div>
-                    <ul class="row is-two-fifths listUL3 listSlide">
-                      <li>Ingredients List</li>
-                      <li><input type="checkbox" /> Sriracha</li>
-                      <li><input type="checkbox" /> Franks</li>
-                      <li><input type="checkbox" /> Cholula</li>
-                      <li><input type="checkbox" /> Tobasco</li>
-                      <li><input type="checkbox" /> Tapatio</li>
-                    </ul>
-                  </div>
+                <li class="splide__slide slide4" id="slide4">
+                      <div class="container  is-centered slideContainer4">
+                        <h3 id="recipe4Name">Chicken</h3>
+                      <ul class="container is-two-fifths is-pulled-left listUL4 listSlide">
+                        <li>Ingredients List</li>
+                        <li><input type="checkbox" /> Sriracha</li>
+                        <li><input type="checkbox" /> Franks</li>
+                        <li><input type="checkbox" /> Cholula</li>
+                        <li><input type="checkbox" /> Tobasco</li>
+                        <li><input type="checkbox" /> Tapatio</li> 
+                      </ul>
+                      </div>
                 </li>
 
-                <li class="splide__slide" id="slide4">
-                  <div class="row topDiv4">
-                    <div class="recipeName">myChalupa</div>
-                    <ul class="row is-two-fifths listUL4 listSlide">
-                      <li>Ingredients List</li>
-                      <li><input type="checkbox" /> Sriracha</li>
-                      <li><input type="checkbox" /> Franks</li>
-                      <li><input type="checkbox" /> Cholula</li>
-                      <li><input type="checkbox" /> Tobasco</li>
-                      <li><input type="checkbox" /> Tapatio</li>
-                    </ul>
-                  </div>
-                </li>
-
-                <li class="splide__slide" id="slide5">
-                  <div class="row topDiv5">
-                    <div class="recipeName">myNachos</div>
-                    <ul class="row is-two-fifths listUL5 listSlide">
-                      <li>Ingredients List</li>
-                      <li><input type="checkbox" /> Sriracha</li>
-                      <li><input type="checkbox" /> Franks</li>
-                      <li><input type="checkbox" /> Cholula</li>
-                      <li><input type="checkbox" /> Tobasco</li>
-                      <li><input type="checkbox" /> Tapatio</li>
-                    </ul>
-                  </div>
+                <li class="splide__slide slide5" id="slide5">
+                      <div class="container  is-centered slideContainer5">
+                        <h3 id="recipe5Name">Beef</h3> 
+                      <ul class="container is-two-fifths is-pulled-left listUL5 listSlide">
+                        <li>Ingredients List</li>
+                        <li><input type="checkbox" /> Sriracha</li>
+                        <li><input type="checkbox" /> Franks</li>
+                        <li><input type="checkbox" /> Cholula</li>
+                        <li><input type="checkbox" /> Tobasco</li>
+                        <li><input type="checkbox" /> Tapatio</li> 
+                      </ul>
+                      </div>
                 </li>
 
               </ul>
@@ -119,21 +114,22 @@
       </div>
     </div>
   </div>
+</div>
 
-  <!-- ################################### Footer ####################################### -->
+<!-- ################################### Footer ####################################### -->
 
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p>
-        <strong><a href="./index.html">recipeShuffle.io</a></strong>
-      </p>
-    </div>
-  </footer>
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong><a href="./index.html">recipeShuffle.io</a></strong>
+    </p>
+  </div>
+</footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="./assets/scripts/results.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="./assets/scripts/results.js"></script>
 </body>
 
 </html>
