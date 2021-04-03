@@ -69,7 +69,7 @@ function renderRecipes() {
       $(ingrChk).attr("type", "checkbox"); 
       $(ingrChk).attr("style", "margin-right: .5rem;"); 
       $(ingrSearchIcon).attr("class", "fas fa-search-dollar")
-      $(ingrSearchLink).attr("href", "https://www.amazon.com/s?k="+ recipes[i].populatedIngredients[j]+ "&i=amazonfresh&ref=zackc")
+      $(ingrSearchLink).attr("href", "https://www.amazon.com/s?k="+ recipes[i].populatedIngredients[j]+ "&i=amazonfresh&ref=recipeshuffle)
       $(ingrSearchLink).attr("style", "color: #f13341; margin-left: .5rem")
       $(ingrSearchLink).attr("target", "_blank")
       $(ingrLi).prepend(ingrChk)
