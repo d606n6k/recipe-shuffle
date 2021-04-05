@@ -100,11 +100,13 @@ p {
 #recipe5Name {
   background-color: white;
   color: black;
-  margin-left: 5px;
+  margin-left: 1rem;
   padding-left: 10px;
+  padding-right: 10px;
   font-size: 24px;
-  opacity: 0.9;
-  max-width: 250px;
+  opacity: 0.7;
+  max-width: 85%;
+  width: max-content;
   border-radius: 5px;
 }
 .slideContainer1,
@@ -116,7 +118,6 @@ p {
   background-repeat: no-repeat;
   height: 600px;
   padding: 10px;
-  width: 600px;
 }
 .recipeName {
   background-color: white;
@@ -146,10 +147,11 @@ p {
   /* mix-blend-mode: ; */
   width: auto;
   padding: 10px;
-  opacity: 0.9;
+  opacity: 0.8;
   border-radius: 2px;
   position: relative;
-  top: 230px;
+  top: 20rem;
+  margin-left: 1rem;
 }
 .splide__slide {
   width: fit-content;
@@ -178,7 +180,7 @@ p {
   border: 1px solid black;
   height: fit-content;
   padding: 10px;
-  max-width: 250px;
+  max-width: 100%;
   flex-wrap: wrap;
   flex-direction: row;
   text-align: left;
@@ -223,6 +225,19 @@ p {
 
 .footer a {
   color: white;
+}
+
+#recipe1Name:hover {
+  color:rgb(247, 64, 97);
+  opacity: 1;
+}
+#recipe2Name:hover {
+  color:rgb(247, 64, 97);
+  opacity: 1;
+}
+#recipe3Name:hover {
+  color:rgb(247, 64, 97);
+  opacity: 1;
 }
 
 /* custom media queries */
