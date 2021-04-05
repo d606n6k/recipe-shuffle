@@ -1,12 +1,6 @@
 // new Splide( '.splide' ).mount();
 
-new Splide( '.splide', {
-	type   : 'fade',
-	padding: {
-		right: '5rem',
-		left : '5rem',
-	},
-} ).mount();
+
 
 
 
@@ -14,11 +8,16 @@ var listUL = $(".listUL")
 // temp vars for test driving
 var runBtn = document.querySelector("#run");
 var popBtn = document.querySelector("#populate");
+var labels = document.querySelectorAll("h3")
+var recipe1Name = document.querySelector("#recipe1Name")
+var recipe2Name = document.querySelector("#recipe2Name")
+var recipe3Name = document.querySelector("#recipe3Name")
 var query;
 var cuisine;
 var diet;
-// runBtn.addEventListener("click", getParams);
-// popBtn.addEventListener("click", renderRecipes);
+runBtn.addEventListener("click", getParams);
+popBtn.addEventListener("click", renderRecipes);
+// temp recipes for testing
 var recipe0 = {
   label: "BBQ Chicken Roll Ups",
   image: "https://www.edamam.com/web-img/a3f/a3f8f2dbd4c72841be852a7c19fc4488.jpeg",
@@ -36,19 +35,22 @@ var recipe1 = {
 var recipe2 = {
   label: "Japanese Chicken Skewers With Scallion (Negima Yakitori) Recipe",
   image: "https://www.edamam.com/web-img/b2d/b2db47159040f3e9560ae4603e2edfaa.jpg",
-  url: "http://www.delish.com/cooking/recipe-ideas/recipes/a25896/bbq-chicken-1891/",
+  url: "https://www.seriouseats.com/recipes/2016/06/japanese-yakitori-negima-grilled-chicken-skewer-recipe.html",
   yield: "6",
   populatedIngredients: ["Teriyaki Sauce", "Scallion", "Kosher Salt", "Skinless Chicken Thigh"]
 }
 var recipes = [recipe0, recipe1, recipe2];
 var ingrUls = $(".listSlide")
 
-window.onload = function() {
-  getParams();
-  renderRecipes();
-};
+// init function
+// window.onload = function() {
+//   getParams();
+// };
+  //   renderRecipes();
 
+  //gets parameters from the url and starts the api fetch with said parameters
 function getParams(){
+  recipes.length = 0;
   var searchParamsArr = document.location.search.split('&');
   console.log(searchParamsArr);
   query = searchParamsArr[0].split('=').pop()
@@ -61,17 +63,34 @@ function getParams(){
 
 
 function renderRecipes() {
+  
+  //populates background image on slides, and the name and urls to click on
   for (var i=0; i < recipes.length; i++){
-    listUL.children().eq(i).children().children().first().text(recipes[i].label)
-    $(ingrUls[i]).children().first().children().first().text(recipes[i].yield)
-    $(ingrUls[i]).children().first().children().first().text(recipes[i].yield)
-    listUL.children().eq(i).attr("style", "width:100%; background: url('"+recipes[i].image+"') no-repeat; background-size: 100% 100%");
+    var recipeLink = document.createElement("a");
+    // var newImgUrl = recipes[i].image.replace(".jpg","-l.jpg");
+    var newImgUrl = recipes[i].image
+    var slideDiv = listUL.children().eq(i).children()
+    var recipeLabel = slideDiv.children().first()
+    console.log(newImgUrl);
+    $(recipeLink).attr("href", recipes[i].url);
+    $(recipeLink).attr("target", "_blank");
+    $(recipeLink).attr("data-index", i);
+    $(recipeLabel).text(recipes[i].label);
+    $(recipeLink).append(recipeLabel);
+    slideDiv.prepend(recipeLink);
+    $(ingrUls[i]).children().first().children().first().text(recipes[i].yield);
+    listUL.children().eq(i).attr("style", "width:100%; background: url('"+newImgUrl+"') no-repeat; background-size: 100% 100%");
+
+    recipe1Name.addEventListener("click", saveRecipe)
+    recipe2Name.addEventListener("click", saveRecipe)
+    recipe3Name.addEventListener("click", saveRecipe)
+
     // Attempt at wrapping link around entire div slide
     // var recipeSearchLink = document.createElement("a")
-    // $(recipeSearchLink).attr("href", '"+recipes[i].url+"')
-    // $(recipeSearchLink).prepend(listUL.children().eq(i))
+    // $(recipeSearchLink).attr("href", recipes[i].url)
+    // listUL.children().eq(i).prepend(recipeSearchLink)
     
-    // listUL.children().eq(i).style.cssText+=`background-image:url(${recipes[i].image})`;
+    // populates individual ingredient lists, with yield, parsed ingredients, and an icon/link that takes the user to amazon to buy the ingredient.
     for (var j=0; j<recipes[i].populatedIngredients.length; j++){
       var ingrLi = document.createElement("li");
       var ingrChk = document.createElement("input");
@@ -81,21 +100,24 @@ function renderRecipes() {
       $(ingrChk).attr("type", "checkbox"); 
       $(ingrChk).attr("style", "margin-right: .5rem;"); 
       $(ingrSearchIcon).attr("class", "fas fa-search-dollar")
-      $(ingrSearchLink).attr("href", "https://www.amazon.com/s?k="+ recipes[i].populatedIngredients[j]+ "&i=amazonfresh&ref=recipeshuffle)")
+      $(ingrSearchLink).attr("href", "https://www.amazon.com/s?k="+ recipes[i].populatedIngredients[j]+ "&i=amazonfresh&ref=recipeshuffle")
       $(ingrSearchLink).attr("style", "color: #f13341; margin-left: .5rem");
       $(ingrSearchLink).attr("target", "_blank");
       $(ingrLi).prepend(ingrChk);
       $(ingrLi).append(ingrSearchLink);
       $(ingrSearchLink).append(ingrSearchIcon);
-      // console.log(listUL.children().eq(i).children("ul").eq(0))
-      // ingrUl = listUL.children().eq(i).children("ul")
 
       ingrUls[i].appendChild(ingrLi);
     } 
   }
+  new Splide( '.splide', {
+    type   : 'fade',
+    padding: {
+      right: '5rem',
+      left : '5rem',
+    },
+  } ).mount();
 }
-// eventually holds all the recipes and ingredients from api
-// var recipes = [];
 // Fetches parsed ingredient name and pushes into recipe.populatedIngredients;
 // and, returns a promise for the ingredient request. Accepts an ingredient
 // object from API and the recipe it belongs to.
@@ -130,8 +152,8 @@ function parseIngredient(ingredient, recipe) {
 }
 function searchApi() {
   var locQueryUrl =
-    "https://api.edamam.com/search?app_id=89a077a3&app_key=71f15e83ac336ca5a82773d77c533a21&imageSize=LARGE&ingr=5&q=" +
-    query;
+    "https://api.edamam.com/search?app_id=89a077a3&app_key=71f15e83ac336ca5a82773d77c533a21&ingr=5&q=" +
+    query + "&imageSize=LARGE";
   if (!query) {
     throw new Error("Missing query -- query is required");
   }
@@ -175,97 +197,24 @@ function searchApi() {
       console.error(error);
     });
 }
-// ############################ OLD CODE ################################################
-// new Splide( '.splide' ).mount();
-// // Variables
-// var query = "salmon";
-// var cuisine = "japanese";
-// var diet;
-// var ingString = [];
-// var picNameEl = $("#picName");
-// var listUL1 = $(".listUL1")
-// var listUL2 = $(".listUL2")
-// var listUL3 = $(".listUL3")
-// var listUL4 = $(".listUL4")
-// var listUL5 = $(".listUL5")
-// // var listUL = $(".listUL")
-// // var listLi = listUl.children();
-// // var listLiVal = listLi.chilren().children() hahahahahahahahah
-// // var ingrText = [];
-// var recipeArr = [];
-// // label, image, ingredients [], dietLabels, healthLabels
-// // https://api.edamam.com/api/food-database/v2/parser?ingr=red%20apple&app_id={your app_id}&app_key={your app_key}
-// function parseAPI() {
-//   for (var i=0; i<recipeArr.length; i++) {
-//     var ingredients = recipeArr[i].recipe.ingredients;
-//     for (var j=0; j<ingredients.length; j++) {
-//       var ingredientText = ingredients[j];
-//       var locQueryUrl = "https://api.edamam.com/api/food-database/v2/parser?ingr=" + ingredientText + "&app_id=9fd01ccc&app_key=9749e250b92bf45333cce1c15593d941"
-//       fetch(locQueryUrl)
-//       .then(function (response) {
-//         if (!response.ok) {
-//           throw response.json();
-//         }
-//         return response.json();
-//       })
-//       .then(function(locRes) {
-//         // console.log(locRes)
-//         // console.log(locRes.parsed[0].food.label)
-//         // ingrText.push(locRes.parsed[0].food.label);
-//     })
-//     }
-//     console.log(locQueryUrl);
-//   } 
-// }
-// function populateRecipe() {
-// }
-// function searchApi() {
-//     var locQueryUrl = "https://api.edamam.com/search?app_id=89a077a3&app_key=71f15e83ac336ca5a82773d77c533a21&imageSize=LARGE&ingr=5&q=" + query;
-//     if (!query) {
-//         throw new Error ("Missing query -- query is required") 
-//           } 
-//     if (cuisine) {
-//     locQueryUrl = locQueryUrl + "&cuisineType=" + cuisine;
-//     }
-//     if (diet) {
-//         locQueryUrl += "&dietLabels=" + diet;
-//       }
-//       console.log(locQueryUrl);
-//     fetch(locQueryUrl)
-//       .then(function (response) {
-//         if (!response.ok) {
-//           throw response.json();
-//         }
-//         return response.json();
-//       })
-//       .then(function (locRes) {
-//         if (locRes.hits) {
-//           recipeArr = locRes.hits.slice(0,5);
-//         } 
-//         // console.log(recipeArr)
-//         // ingredients = locRes.hits[0].recipe.ingredients
-//         // console.log(ingredients[0].text)
-//         // for (i=0; i<ingredients.length; i++) {
-//         //   ingString.push(ingredients[i].text);
-//         // }
-//         // console.log(ingString)
-//         // for (i=0; i<2; i++){
-//         //     console.log(locRes.hits[i].recipe.label)
-//         //     // set label to fill expected html element by ID
-//         //     console.log(locRes.hits[i].recipe.image)
-//         //     // set img to fill expected html element by ID
-//         //     console.log(locRes.hits[i].recipe.ingredients)
-//         //     // set ingredients to fill expected html element by ID
-//         //     console.log(locRes.hits[i].recipe.dietLabels)
-//         //     // set dietLabels to fill expected html element by ID
-//         //     // console.log(locRes.hits[i].recipe.healthLabels)
-//         // }
-//       })
-//       .then(parseAPI)
-//       .catch(function (error) {
-//         console.error(error);
-//       });
-//   }
-// searchApi();
-// // function populateIngredients() {
-// // }
+
+var recipeNo;
+var savedRecipes = [];
+
+// saves any recipe the user clicks on into local storage for display on homepage.
+function saveRecipe(eventobject) {
+recipeNo = $(eventobject.target).attr("data-index") 
+console.log(recipeNo)
+selectedRecipe = recipes[recipeNo];
+savedRecipes.push(selectedRecipe);
+localStorage.setItem("visitedRecipes", JSON.stringify(savedRecipes));
+console.log(savedRecipes)
+}
+
+// gets recipes from local storage
+function getVisitedRecipes (){
+  savedRecipes = JSON.parse(localStorage.getItem("visitedRecipes"))
+  console.log(savedRecipes)
+}
+
+getVisitedRecipes()
