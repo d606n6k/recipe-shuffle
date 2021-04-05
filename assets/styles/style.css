@@ -1,176 +1,238 @@
-body{
-    font-family: 'Fredoka One', cursive;
-    background: linear-gradient(
-162deg
-, rgba(255,95,124,1) 0%, rgba(255,95,124,1) 35%, rgba(255,0,0,1) 100%);
+body {
+  font-family: "Fredoka One", cursive;
+  background: linear-gradient(
+    162deg,
+    rgba(255, 95, 124, 1) 0%,
+    rgba(255, 95, 124, 1) 35%,
+    rgba(255, 0, 0, 1) 100%
+  );
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #main-nav {
-    background-color: #e91e43;
+  background-color: #e91e43;
 }
 
 #hero-body {
-    background-color: #ff5f7c;
-    height: 400px;
-    background: linear-gradient( rgb(255 255 255 / 45%), rgb(118 118 118 / 45%) ), url(../images/hero.jpg);
-    max-height: 100vh;
-    background-size: cover;
-    background-position: center;
+  background-color: #ff5f7c;
+  height: 400px;
+  background: linear-gradient(rgb(255 255 255 / 45%), rgb(118 118 118 / 45%)),
+    url(../images/hero.jpg);
+  max-height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
 .navbar-item {
-    color: white;
+  color: white;
 }
 
 .navbar-start a {
-    transition: color ease-in-out;
-    transition-duration: 0.5s;
+  transition: color ease-in-out;
+  transition-duration: 0.5s;
 }
 
 .navbar-start a:hover {
-    color: #ffd2da;
-    background-color: #e91e43;
-    transition: color ease-in-out;
-    transition-duration: 0.5s;
+  color: #ffd2da;
+  background-color: #e91e43;
+  transition: color ease-in-out;
+  transition-duration: 0.5s;
 }
 
-.navbar-burger{
-    background-color: #e93a5a;
+.navbar-burger {
+  background-color: #e93a5a;
 }
 .navbar-burger span {
-    color: white;
+  color: white;
 }
 
 .pageHeader {
-    background: #f98888;
+  background: #f98888;
 }
 
 .homepage-main {
-    background: rgb(255,95,124);
-    background: linear-gradient(162deg, rgba(255,95,124,1) 0%, rgba(255,95,124,1) 35%, rgba(255,0,0,1) 100%);
+  background: rgb(255, 95, 124);
+  background: linear-gradient(
+    162deg,
+    rgba(255, 95, 124, 1) 0%,
+    rgba(255, 95, 124, 1) 35%,
+    rgba(255, 0, 0, 1) 100%
+  );
 }
 
 .homepage-main .subtitle {
-    color: white;
+  color: white;
 }
 
 .homepage-recipe {
-    /* background-color: orange; */
+  /* background-color: orange; */
 }
 
 .homepage-recipe h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .homepage-find-recipe {
-    background-color: rgb(177 25 53 / 0%);
+  background-color: rgb(177 25 53 / 0%);
 }
 
 .homepage-find-recipe h2 {
-    text-align: center;
+  text-align: center;
 }
 
-.recipe-search {
-
-}
+/* .recipe-search {
+} */
 
 .middleContainerResults {
-    height: 500px;   
+  height: 607px;
 }
-
+#recipe1Name,
+#recipe2Name,
+#recipe3Name,
+#recipe4Name,
+#recipe5Name {
+  background-color: white;
+  color: black;
+  margin-left: 5px;
+  padding-left: 10px;
+  font-size: 24px;
+  opacity: 0.9;
+  max-width: 250px;
+  border-radius: 5px;
+}
+.slideContainer1,
+.slideContainer2,
+.slideContainer3,
+.slideContainer4,
+.slideContainer5 {
+  background-image: url(/assets/images/hero.jpg);
+  background-repeat: no-repeat;
+  height: 600px;
+  padding: 50px;
+  width: 600px;
+}
 .recipeName {
-    background-color: white;
-    color: black;
-    padding: 10px;
-    opacity: 0.7;
-    max-width: 20%;
-    border-radius: 5px;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  opacity: 0.7;
+  max-width: 20%;
+  border-radius: 5px;
 }
 
 .sliderBox {
-    background-color: lightgray;
-    border-radius: 10px;
+  background-color: lightgray;
+  border-radius: 10px;
 }
 
 .splide__list {
-    height: 400px;
+  height: 600px;
 }
 
 .splideBox {
-    /* background: rgb(255,95,124);
-    background: linear-gradient(162deg, rgba(255,95,124,1) 0%, rgba(255,95,124,1) 35%, rgba(255,0,0,1) 100%); */
+  height: 700px;
+  /* background: rgb(255,95,124);
+      background: linear-gradient(162deg, rgba(255,95,124,1) 0%, rgba(255,95,124,1) 35%, rgba(255,0,0,1) 100%); */
 }
 
 .listSlide {
-    justify-content: flex-start;
-    background-color: white;
-    mix-blend-mode: ;
-    width: auto;
-    padding: 10px;
-    opacity: 0.9;
-    border-radius: 2px;
-    margin-top: 200px;
-    
+  justify-content: flex-start;
+  background-color: white;
+  /* mix-blend-mode: ; */
+  width: auto;
+  padding: 10px;
+  opacity: 0.9;
+  border-radius: 2px;
+  margin-top: 200px;
 }
-
-
+.splide__slide {
+  width: fit-content;
+}
+.topDiv1,
+.topDiv2,
+.topDiv3,
+.topDiv4,
+.topDiv5 {
+  border: 1px solid black;
+  height: 100%;
+}
+.slide1,
+.slide2,
+.slide3,
+.slide4,
+.slide5 {
+  justify-content: center;
+  align-items: center;
+}
+.listUL1,
+.listUL2,
+.listUL3,
+.listUL4,
+.listUL5 {
+  border: 1px solid black;
+  height: fit-content;
+  padding: 5px;
+  max-width: 250px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: left;
+}
 .recipe-main-background {
-    margin-top: 20px;
-    margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .recipe-search-background {
-    margin-top: 20px;
-    margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .select-control {
-    width: 100%;
+  width: 100%;
 }
 
 #cuisine {
-    width: 100%;
+  width: 100%;
 }
 
 #cuisine-control p {
-    text-align: center;
-    margin-bottom: 5px;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
-#diet{
-    width: 100%;
+#diet {
+  width: 100%;
 }
 
 #diet-control p {
-    text-align: center;
-    margin-bottom: 5px;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 .footer {
-    background-color: #e91e43;
-    color: white;
-    padding: 2rem 1.5rem 2rem;
+  background-color: #e91e43;
+  color: white;
+  padding: 2rem 1.5rem 2rem;
 }
 
 .footer a {
-    color: white;
+  color: white;
 }
 
 /* custom media queries */
-@media screen and (max-width: 768px){
-    .navbar-item{
-        text-align: center;
-        padding-top: 13px;
-    }
+@media screen and (max-width: 768px) {
+  .navbar-item {
+    text-align: center;
+    padding-top: 13px;
+  }
 }
 
-@media screen and (max-width: 1023px){
-    .navbar-item{
-        display: inherit !important;
-        text-align: center;
-        padding-top: 13px;
-    }
+@media screen and (max-width: 1023px) {
+  .navbar-item {
+    display: inherit !important;
+    text-align: center;
+    padding-top: 13px;
+  }
 }
