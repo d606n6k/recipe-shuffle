@@ -15,8 +15,8 @@ var recipe3Name = document.querySelector("#recipe3Name")
 var query;
 var cuisine;
 var diet;
-runBtn.addEventListener("click", getParams);
-popBtn.addEventListener("click", renderRecipes);
+// runBtn.addEventListener("click", getParams);
+// popBtn.addEventListener("click", renderRecipes);
 // temp recipes for testing
 var recipe0 = {
   label: "BBQ Chicken Roll Ups",
@@ -43,9 +43,9 @@ var recipes = [recipe0, recipe1, recipe2];
 var ingrUls = $(".listSlide")
 
 // init function
-// window.onload = function() {
-//   getParams();
-// };
+window.onload = function() {
+  getParams();
+};
   //   renderRecipes();
 
   //gets parameters from the url and starts the api fetch with said parameters
