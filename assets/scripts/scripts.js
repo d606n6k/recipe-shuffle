@@ -20,18 +20,17 @@ var recipe0 = {
   var recipe2 = {
     label: "Japanese Chicken Skewers With Scallion (Negima Yakitori) Recipe",
     image: "https://www.edamam.com/web-img/b2d/b2db47159040f3e9560ae4603e2edfaa.jpg",
-    url: "https://www.seriouseats.com/recipes/2016/06/japanese-yakitori-negima-grilled-chicken-skewer-recipe.html",
+    url: "http://www.delish.com/cooking/recipe-ideas/recipes/a25896/bbq-chicken-1891/",
     yield: "6",
     populatedIngredients: ["Teriyaki Sauce", "Scallion", "Kosher Salt", "Skinless Chicken Thigh"]
   }
   var recipes = [recipe0, recipe1, recipe2];
 
 function renderDemo (){
-    randomIdx= Math.floor(Math.random() * recipes.length)
+    randomIdx= Math.floor(Math.random() * 3)
     
     demoImg.setAttribute("src", recipes[randomIdx].image);
     recipeLink.setAttribute("href", recipes[randomIdx].url);
-    recipeLink.setAttribute("target", "_blank");
     recipeName.textContent = recipes[randomIdx].label;
     
 
@@ -56,16 +55,5 @@ function handleSearchFormSubmit(event) {
     location.assign(queryString);
 }
 
-function getVisitedRecipes (){
-  var savedRecipes = JSON.parse(localStorage.getItem("visitedRecipes"))
-  console.log(savedRecipes)
-  if(savedRecipes.length>2) {
-    recipes = savedRecipes
-  } else{
-    for(var i = 0; i < savedRecipes.length; i++)
-  recipes.push(savedRecipes[i])
-}}
-
 recipeBtn.addEventListener('click', handleSearchFormSubmit);
-getVisitedRecipes();
 renderDemo();
