@@ -57,7 +57,6 @@ function handleSearchFormSubmit(event) {
 }
 
 function getVisitedRecipes (){
-  alert("hi")
   var savedRecipes = JSON.parse(localStorage.getItem("visitedRecipes"))
   console.log(savedRecipes)
   if(!savedRecipes){
