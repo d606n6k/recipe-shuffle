@@ -210,7 +210,12 @@ function saveRecipe(eventobject) {
 recipeNo = $(eventobject.target).attr("data-index") 
 console.log(recipeNo)
 selectedRecipe = recipes[recipeNo];
+if(!savedRecipes){
+  savedRecipes= ["r"]
+  savedRecipes[0] = selectedRecipe
+} else {
 savedRecipes.push(selectedRecipe);
+}
 localStorage.setItem("visitedRecipes", JSON.stringify(savedRecipes));
 console.log(savedRecipes)
 }
