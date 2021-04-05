@@ -4,37 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"/>
     <link rel="stylesheet" href="./assets/styles/style.css" />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
     <title>RecipeShuffle.io</title>
   </head>
   <body>
     <!-- begin nav -->
-    <nav
-      id="main-nav"
-      class="nav navbar"
-      role="navigation"
-      aria-label="main navigation"
-    >
+    <nav id="main-nav" class="nav navbar" role="navigation" aria-label="main navigation">
       <div class="container navbar-brand">
         <div class="navbar-start">
           <a class="navbar-item" href="./index.html">recipeShuffle.io</a>
@@ -52,7 +34,7 @@
     </section>
     <section class="section homepage-main">
       <div class="columns is-centered">
-        <div class="column is-four-fifths">
+        <div id="intro" class="column is-four-fifths">
           <h1 class="title">Welcome to RecipeShuffle.io!</h1>
           <h2 class="subtitle">
             A simple website built to help you find
@@ -61,51 +43,32 @@
             <strong>pantry!</strong>
           </h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-            distinctio natus deleniti labore. Expedita dolorum maxime beatae
-            aliquam, atque reprehenderit eaque temporibus explicabo ab vel
-            labore, officia, soluta dolor! Magnam? Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Nostrum modi corporis harum aut,
-            possimus vitae quis laboriosam accusantium excepturi ducimus saepe
-            autem corrupti molestias, tempora eaque quaerat quisquam vel sed.
+            Have you ever woken up from a nap and realized you needed cook dinner? Have you ever opened up your pantry to just a few ingredients and wondered what you could cook with them? We have the PERFECT application to help with taking those ingredients and suggesting a recipe based on what you have! Introducing recipeShuffle.io! <strong>The perfect recipe buddy!</strong></p>
           </p>
         </div>
       </div>
       <!-- card for example recipe -->
       <div class="columns homepage-recipe">
-        <div
-          class="column is-three-fifths card recipe-main-background is-offset-one-fifth"
-        >
+        <div class="column is-three-fifths card recipe-main-background is-offset-one-fifth">
           <div class="columns is-centered">
             <div id="recipe-name-homepage" class="card-image column is-6">
               <h2 class="title is-4" id="recipe-name">Recipe Name</h2>
               <figure class="image">
-                <a href="#" id="recipe-link"
-                  ><img
-                    id="demo-img"
-                    src="https://via.placeholder.com/900x560"
-                    alt="Placeholder image"
-                /></a>
+                <a href="#" id="recipe-link">
+                  <img id="demo-img" src="https://via.placeholder.com/900x560" alt="Placeholder image"/>
+                </a>
               </figure>
-              <!-- need empty <i> tags for js -->
             </div>
           </div>
         </div>
       </div>
       <!-- search box inputs -->
       <div class="columns homepage-find-recipe recipe-search">
-        <div
-          class="column is-three-fifths card recipe-search-background is-offset-one-fifth"
-        >
+        <div class="column is-three-fifths card recipe-search-background is-offset-one-fifth">
           <div class="columns is-centered">
             <div class="column is-10">
               <h2 class="title is-4">Find a Recipe</h2>
-              <input
-                id="recipe-input"
-                class="input is-primary is-medium"
-                type="text"
-                placeholder="Search for a recipe!"
-              />
+              <input id="recipe-input" class="input is-primary is-medium" type="text" placeholder="Search for a recipe!"/>
             </div>
           </div>
           <div class="columns is-centered">
@@ -138,12 +101,7 @@
             </div>
           </div>
           <div class="column is-centered">
-            <button
-              class="button is-primary is-medium is-fullwidth"
-              id="recipe-btn"
-            >
-              Search Recipe
-            </button>
+            <button class="button is-primary is-medium is-fullwidth" id="recipe-btn">Search Recipe</button>
           </div>
         </div>
       </div>
@@ -156,12 +114,7 @@
         </p>
       </div>
     </footer>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <!-- <script src="./assets/scripts/results.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./assets/scripts/scripts.js"></script>
   </body>
 </html>
