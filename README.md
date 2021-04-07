@@ -21,7 +21,7 @@ GitHub CLI: gh repo clone d606n6k/recipe-shuffle
 ## Credits
 Collaborators:
 - William Lucht: https://github.com/d606n6k
-- Tyler "Tylor" Abregg: https://github.com/UnDuhDuhSea 
+- Tyler "Tylor" Abegg: https://github.com/UnDuhDuhSea 
 - Steve LeValley: https://github.com/sjlevalley
 - Zack Campbell: https://github.com/zax5021 
 
